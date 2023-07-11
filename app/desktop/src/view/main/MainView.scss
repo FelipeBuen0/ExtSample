@@ -1,0 +1,29 @@
+.component-data-view-container{
+    color: whitesmoke;
+    background: linear-gradient(#151531, #c051ff);
+    box-shadow: 2px 2px 2px 2px #b0b0b0;
+    border-radius: 6px;
+    padding: 16px;
+    margin: 8px;
+    min-width: 240px;
+    max-width: 240;
+    .image-container {
+        background-position: center center;
+        background-repeat: no-repeat ;
+        background-size: cover;
+        width: 210px;
+        height: 210px;
+    }
+}
+.main-header {
+    font-size: 36px;
+    text-align: center;
+    color: whitesmoke;
+    background-color: #EC1D24;
+    padding: 18px;
+    margin: 0;
+    font-family: 'Marvel';
+}
+.body {
+    background-color: #151531;
+}
