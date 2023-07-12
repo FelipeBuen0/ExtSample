@@ -1,6 +1,7 @@
 Ext.define('ExtSample.view.main.MainView', {
 	extend: 'Ext.Container',
 	xtype: 'main-view',
+	cls: 'main-view',
 	controller: 'main-view',
 	viewModel: 'main-view',
 	scrollable: 'y',
@@ -8,9 +9,6 @@ Ext.define('ExtSample.view.main.MainView', {
 		xtype: 'component',
 		html: '<h1>MARVEL CHARACTERS</h1>',
 		cls: 'main-header'
-	}, {
-		xtype: 'component',
-		html: '<hr>'
 	}, {
 		xtype: 'componentdataview',
 		reference: 'dataView',
@@ -25,7 +23,7 @@ Ext.define('ExtSample.view.main.MainView', {
 		},
 		itemConfig: {
 			xtype: 'catalog-view',
-			cls: 'component-data-view-container',
+			cls: 'catalog-view',
 			viewModel: true
 		},
 		listeners: {

@@ -9,7 +9,7 @@ Ext.define('ExtSample.model.Base', {
         proxy: {
             type: 'marvel',
             //url: 'http://gateway.marvel.com:80/v1/public/{entityName:lowercase}',
-            // url: ' http://localhost:5216/v1/public/{entityName:lowercase}'
+            url: ' http://localhost:5216/v1/public/{entityName:lowercase}'
         }
     }
 });

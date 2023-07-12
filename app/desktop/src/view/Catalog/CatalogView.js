@@ -1,6 +1,7 @@
 Ext.define('ExtSample.view.Catalog.CatalogView', {
 	extend: 'Ext.Container',
 	xtype: 'catalog-view',
+	cls: 'catalog-view',
 	controller: 'catalog-view',
 	viewModel: 'catalog-view',
     layout: {
@@ -8,38 +9,30 @@ Ext.define('ExtSample.view.Catalog.CatalogView', {
         align: 'stretch'
     },
     items: [{
-        xtype: 'container',
-        flex: 1,
-        layout: 'center',
-        items: [{
-            margin: 4,
-            xtype: 'image',
-            cls: 'image-container',
-            bind: {
-                src: '{record.thumbnail.path}.{record.thumbnail.extension}'
-            }
-        }]
-	}, {
+        xtype: 'image',
+        cls: 'image-container',
+        margin: 4,
+        bind: {
+            src: '{record.thumbnail.path}.{record.thumbnail.extension}'
+        }
+    }, {
+        xtype: 'component',
+        bind: {
+            html: '{record.name:ellipsis("18")}'
+        }
+    }, {
         xtype: 'component',
         html: '<hr>'
-	}, {
-        xtype: 'container',
-        layout: {
-            type: 'hbox',
-            align: 'stretch',
-            pack: 'start'
+    }, {
+        xtype: 'component',
+        bind: {
+            html: '{record.description:ellipsis("128")}'
         },
-        items: [{
-            xtype: 'component',
-            bind: {
-                html: '{record.name:ellipsis("18")}'
-            },
-            flex: 1
-        }, {
-            xtype: 'checkbox',
-            bind: {
-                checked: '{record.isChecked}'
-            }
-        }]
+    }, {
+        xtype: 'component',
+        bind: {
+            html: '<h3>CONFIDENTIAL</h3>',
+            hidden: '{record.description}'
+        },
     }]
 });
