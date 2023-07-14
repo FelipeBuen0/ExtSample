@@ -1,5 +1,6 @@
 {
     "conventionalCommits.scopes": [
-        "Card-animation"
+        "Card-animation",
+        "Infrastructure"
     ]
 }
