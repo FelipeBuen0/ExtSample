@@ -22,12 +22,24 @@ Ext.define('ExtSample.view.main.MainView', {
 			wrap: true
 		},
 		itemConfig: {
-			xtype: 'catalog-view',
-			cls: 'catalog-view',
+			xtype: 'character-data-view',
+			cls: 'character-data-view',
 			viewModel: true
 		},
 		listeners: {
 			childtap: 'onChildDataviewTap'
 		}
+	}, {
+		xtype: 'grid',
+		bind: {
+			store: '{Characters}'
+		},
+		columns: [{
+			text: 'Nome do personagem',
+			dataIndex: 'name'
+		}, {
+			text: 'Descrição do personagem',
+			dataIndex: 'description'
+		}]
 	}]
 });
