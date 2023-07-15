@@ -6,9 +6,7 @@ Ext.define('ExtSample.view.main.MainView', {
 	viewModel: 'main-view',
 	scrollable: 'y',
 	items: [{
-		xtype: 'component',
-		html: '<h1>MARVEL CHARACTERS</h1>',
-		cls: 'main-header'
+		xtype: 'header-view'
 	}, {
 		xtype: 'componentdataview',
 		reference: 'dataView',
@@ -30,16 +28,6 @@ Ext.define('ExtSample.view.main.MainView', {
 			childtap: 'onChildDataviewTap'
 		}
 	}, {
-		xtype: 'grid',
-		bind: {
-			store: '{Characters}'
-		},
-		columns: [{
-			text: 'Nome do personagem',
-			dataIndex: 'name'
-		}, {
-			text: 'Descrição do personagem',
-			dataIndex: 'description'
-		}]
+		xtype: 'main-grid'
 	}]
 });

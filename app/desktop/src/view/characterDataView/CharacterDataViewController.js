@@ -1,4 +1,4 @@
-Ext.define('ExtSample.view.characterDataView.CharacterViewController', {
+Ext.define('ExtSample.view.characterDataView.CharacterDataViewController', {
 	extend: 'Ext.app.ViewController',
 	alias: 'controller.character-data-view',
 	onEnter: function (window, textarea) {
